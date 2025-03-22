@@ -35,7 +35,7 @@ ax.xaxis.set_minor_locator(ticker.MultipleLocator(0.5))    # Minor ticks every 1
 
 ax.axhline(1.0, color='k', lw=2.5, ls='-', zorder=5)
 fig.tight_layout(pad=0.5)
-# fig.savefig('area_mach_distr.pgf')
+fig.savefig('area_mach_distr.pgf')
 
 fig, ax = new_figure(latex_style=True)
 scale = 0.6
