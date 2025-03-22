@@ -15,6 +15,10 @@ def main():
     A = 1
     NPR_crit = (1 + (gamma-1)/2)**(gamma/(gamma-1))
 
+
+
+
+
     pt6 = 180e3
     Tt6 = 1140
 
@@ -37,7 +41,7 @@ def main():
     # ax.axvline(np.max(m_flow), ls='--', lw=1.5, color='k')
     ax.grid()
     ax.set_xticklabels(["0", r'$\dot{m}_{\mathrm{choke}}$'])
-    ax.set_ylabel(r'$p_{6} / p_{\mathrm{amb}}$')
+    ax.set_ylabel(r'$p_{t5} / p_{\infty}$')
     ax.set_yticks([1, NPR_crit, 1.5*NPR_crit])
     ax.set_yticklabels(['1', r'$\mathrm{NPR}_{\mathrm{crit}}$', r'+$\infty$'])
     mchoke = A*pt6/np.sqrt(Tt6)*np.sqrt(gamma/R)*(1+(gamma-1)/2)**(-(gamma+1)/(2*(gamma-1)))
@@ -55,7 +59,7 @@ def main():
     ax.set_yticks([0, np.max(m_flow)])
     ax.grid()
     ax.set_yticklabels(["0", r'$\dot{m}_{\mathrm{choke}}$'])
-    ax.set_xlabel(r'$p_{\mathrm{amb}} / p_{6}$')
+    ax.set_xlabel(r'$p_{\infty} / p_{t5}$')
     ax.set_xticks([0, 1/NPR_crit, 1])
     ax.set_xticklabels(['0', r'$\frac{1}{\mathrm{NPR}_{\mathrm{crit}}}$', '1'])
     print(np.round(1/NPR_crit, 3))
